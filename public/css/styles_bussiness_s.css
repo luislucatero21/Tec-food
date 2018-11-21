@@ -1,0 +1,80 @@
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Helvetica, Arial, sans-serif;
+	color: #666;
+	background: #f2f2f2; 
+	font-size: .7em;
+    
+    background-color: #C0635D;
+}
+
+h1 {
+	font-size: 2.3em;
+	line-height: 1.3em;
+	margin: 15px 0;
+	text-align: center;
+	font-weight: 300;
+}
+
+p {
+	margin: 0 0 1.5em 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+#main-header {
+	position: relative;
+	background: #C04941;
+	color: white;
+	height: 8em;
+}	
+	#main-header a {
+		color: white;
+    }
+    
+    #main-header .side-logo{
+        width: auto;
+        height: 4em;
+    }
+
+#logo-header {
+	float: right;
+	padding: 2.5em 60px 2em 0px;
+	text-decoration: none;
+}
+	
+	#logo-header .site-name {
+		display: block;
+		font-weight: 700;
+		font-size: 2.4em;
+	}
+	
+	#logo-header .site-desc {
+		display: block;
+		font-weight: 300;
+		font-size: 0.8em;
+		color: #999;
+    }
+
+#logo-shop-cart{
+        float: right;
+        padding: 2em 60px 2em 0px;
+}
+
+#logo-tec-food{
+	height: 5em;
+	float: left;
+	padding: 1em 60px 1em 25px;
+}
+
+#main-header #text-header{
+	float: left;
+	font-size: 4em;
+	text-emphasis: uppercase;
+	padding: 20px 60px 2em 0px;
+}
