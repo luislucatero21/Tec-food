@@ -9,7 +9,7 @@ var ajv = new AJV({});
 
 controller = {};
 
-controller.addProduct = function(object, id){
+controller.addProduct = function(element, id){
     var promise = new Promise(
         function (resolve, reject){
             db.getConnection().query("insert into products(product_name, bussiness_id, description, price) values ('"+ element.product_name + "', '"+ id +"', '"+ element.description +"', "+ element.price +");", 
@@ -25,7 +25,7 @@ controller.addProduct = function(object, id){
     return promise;
 }
 
-controller.updateProduct = function(object, id){
+controller.updateProduct = function(element, id){
     var promise = new Promise(
         function (resolve, reject){
             db.getConnection().query("update products set product_name = '"+ element.product_name + "', bussiness_id = '" + element.bussiness_id +"', description = '"+ element.description +"', price = "+ element.price +" where id = "+ id +";", 
@@ -44,7 +44,7 @@ controller.updateProduct = function(object, id){
 controller.getProducts = function(){
     var promise = new Promise(
         function (resolve, reject){
-            db.getConnection().query("select * from Users;", 
+            db.getConnection().query("select * from Products;", 
                 function (err, rows){
                     if (err){
                         reject(err);
@@ -56,3 +56,5 @@ controller.getProducts = function(){
     );
     return promise;
 }
+
+module.exports = controller;

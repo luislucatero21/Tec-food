@@ -57,7 +57,7 @@ controller.addBussiness = function(element){
     return promise;
 }
 
-controller.updateUser = function(element, id){
+controller.updateBussiness = function(element, id){
     var promise = new Promise(
         function (resolve, reject){
             db.getConnection().query("update bussiness set bussiness_name = '" + element.bussiness_name + "', email = '" + element.email + "', phone = '" + element.phone + "', adress = '" + element.adress + "', owner_name = '" + element.owner_name + "', password = '" + element.password + "' where id = " + id +"; ",

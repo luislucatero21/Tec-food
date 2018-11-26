@@ -20,9 +20,19 @@ router.route('/')
     	}
 	})
     
-    .post((req,res)=> {
-        controller.addBussiness(req.body.bussiness);
-        res.send("SUCCESS");
+    .post(async (req,res)=> {
+		try {
+			response = await controller.addBussiness(req.body.bussiness);
+			console.log("SUCEESS");
+			res.status(200);
+			res.send(response);
+		}
+        catch(error){
+			console.log("ERROR: " + error);
+			res.status(501);
+			res.send(error);
+		}
+        
     });
 
 router.get('/:bussiness_id/products', (req,res) => res.send(
@@ -30,7 +40,7 @@ router.get('/:bussiness_id/products', (req,res) => res.send(
 ));
 
 router.post('/:bussiness_id', (req, res)=> {
-	controller.updateUser(req.body.bussiness, req.params.bussiness_id);
+	controller.updateBussiness(req.body.bussiness, req.params.bussiness_id);
 	res.send("SUCCESS");
 });
 
