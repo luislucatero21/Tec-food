@@ -34,6 +34,7 @@ $(document).ready(function() {
                     console.log(data);
                     if(status == 'success') {
                         alert("Negocio registrado satistactoriamente!");
+                        window.location.href = "index_bussiness.html";
                     }
                 },
                 dataType: 'json'
