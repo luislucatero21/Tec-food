@@ -12,6 +12,8 @@
         <meta charset="utf-8" />
         <title>Inicio_de_sesion</title>
         <link href="../css/style_bussiness_registry.css" rel="stylesheet"> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="../js/bussiness_registry.js"></script>
     </head>
     <body>
         <div class="big-container">
@@ -22,12 +24,16 @@
             <div class="auto-margin">
                 <div class="form">
                     <form class="login-form">
-                        <input type="text" placeholder="Negocio"/>
-                        <input type="text" placeholder="Descripción"/>
-                        <input type="password" placeholder="Contraseña"/>
+                        <input type="text" placeholder="Nombre del negocio" id="bussiness_name"/>
+                        <input type="email" placeholder="Correo" id="email"/>
+                        <input type="tel" placeholder="Teléfono" id="phone"/>
+                        <input type="text" placeholder="Dirección" id="adress"/>
+                        <input type="text" placeholder="Nombre del dueño" id="owner_name"/>
+                        <input type="password" placeholder="Contraseña" id="password"/>
                     </form>
                 </div>
             </div>
         </div>
+        <input id = "btnSubmit" type="submit" value="Release"/>
     </body>
 </html>
